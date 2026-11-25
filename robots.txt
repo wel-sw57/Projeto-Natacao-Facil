@@ -1,0 +1,5 @@
+# Robots.txt para Natacao Facil
+User-agent: *
+Allow: /
+
+Sitemap: https://natacaofacil.com.br/sitemap.xml

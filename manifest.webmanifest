@@ -1,0 +1,18 @@
+{
+  "name": "Natação Fácil | Escola de Natação em Águas Abertas",
+  "short_name": "Natação Fácil",
+  "description": "Aprenda a nadar do zero na praia em Salvador/BA. Aulas no Porto da Barra e Itapuã.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#009fe3",
+  "theme_color": "#009fe3",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "Logo.jpg",
+      "sizes": "192x192 512x512",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

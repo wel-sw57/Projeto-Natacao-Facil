@@ -1,0 +1,21 @@
+# ====================================================
+# .gitignore — Natação Fácil
+# ====================================================
+
+# Dependências e caches de sistema
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs e scripts temporários
+*.log
+*.tmp
+scratch/
+
+# Pacotes ZIP gerados localmente
+natacao-facil-netlify.zip

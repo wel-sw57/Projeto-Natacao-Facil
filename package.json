@@ -1,0 +1,22 @@
+{
+  "name": "natacao-facil-website",
+  "version": "2.0.0",
+  "description": "Site Oficial da Natação Fácil — Maior escola de natação em águas abertas da Bahia (Porto da Barra e Itapuã, Salvador/BA)",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Build concluído com sucesso. Site estático pronto para publicação no Netlify.'",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "natacao",
+    "aguas-abertas",
+    "salvador",
+    "bahia",
+    "porto-da-barra",
+    "itapua",
+    "netlify"
+  ],
+  "author": "WELTON CIRQUEIRA — pedrograve.com",
+  "license": "ISC"
+}

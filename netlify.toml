@@ -1,0 +1,66 @@
+# ====================================================
+# CONFIGURAÇÃO OFICIAL NETLIFY — NATAÇÃO FÁCIL
+# Suporte total para https://app.netlify.com/start (Git Deploy Contínuo)
+# e https://app.netlify.com/drop (Deploy Manual)
+# ====================================================
+
+[build]
+  # Diretório de publicação na raiz do repositório
+  publish = "."
+  # Site estático em HTML/CSS/JS nativo — sem necessidade de etapas pesadas de build
+  command = "echo 'Build concluído com sucesso. Site estático pronto para o Netlify!'"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Cabeçalhos Globais de Segurança, Performance e SEO
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=()"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline' https://unpkg.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://unpkg.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; frame-src 'self' https://www.google.com https://maps.google.com; connect-src 'self';"
+
+# Cache curto para arquivos HTML e Logo da marca (permite atualização imediata)
+[[headers]]
+  for = "/"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/index.html"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/Logo.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=3600, stale-while-revalidate=86400"
+
+# Cache otimizado para Folhas de Estilo e Scripts
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=86400, stale-while-revalidate=604800"
+
+# Cache de alta performance para Fotografias Locais
+[[headers]]
+  for = "/foto-*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=604800, stale-while-revalidate=2592000"
+
+# Redirecionamento gracioso para página inicial caso uma URL interna não exista
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = false
